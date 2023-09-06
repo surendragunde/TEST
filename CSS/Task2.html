@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <style>
+        .container{
+            display:grid;
+        }
+        .Vertical{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            display: flex; /* Center content vertically */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center;/* Center horizontally */
+        }
+        .Horizontal{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            text-align: center;
+            display: flex; /* Center content vertically */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+        }
+        #one{
+            list-style-type: none;
+            width: 100px;
+            margin: 0;
+            padding: 0;
+        }
+        .first a{
+            text-decoration: none ;
+            display: block;
+            padding: 8px 16px;
+            width: 140px;
+        }
+        .first a.active{
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+        }
+        .first a:hover:not(.active){
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+        }
+        .first a.notactive{
+            background-color: rgb(102, 224, 245);
+            color: blue;
+            font-weight: bold;
+        }
+        #two{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(199, 199, 199);
+        }
+        .second{
+            float: left;
+            border-right: 1px solid rgb(25, 2, 194);
+        }
+        .second a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+        .second a.active1{
+            background-color: rgb(104, 104, 104);
+            color: White;
+            font-weight: bold;
+        }
+        .second a:hover:not(.active1){
+            background-color: rgb(104, 104, 104);
+            color: white;
+            font-weight: bold;
+        }
+        .second a.notactive1{
+            background-color: rgb(199, 199, 199);
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Vertical">
+            <h4>Vertical Navigation Bar</h4>
+            <ul id="one">
+                <li class="first"><a href="#home" class="active">Home</a></li>
+                <li class="first"><a href="#java" class="notactive">Java</a></li>
+                <li class="first"><a href="#css" class="notactive">CSS</a></li>
+                <li class="first"><a href="#html" class="notactive">HTML</a></li>
+                <li class="first"><a href="#bs" class="notactive">Bootstrap</a></li>
+            </ul>
+        </div>
+        <div class="Horizontal">
+            <h4>Horizontal Navigation Bar</h4>
+            <ul id="two">
+                <li class="second"><a href="#home" class="active1">Home</a></li>
+                <li class="second"><a href="#java" class="notactive1">Java</a></li>
+                <li class="second"><a href="#css" class="notactive1">CSS</a></li>
+                <li class="second"><a href="#html" class="notactive1">HTML</a></li>
+                <li class="second"><a href="#bs" class="notactive1">Bootstrap</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
